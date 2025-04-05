@@ -50,12 +50,12 @@ To build a machine learning and deep learning pipeline that classifies ECG signa
 
 ---
 
-## 📉 Results (Example)
+## 📉 Results
 
 | Model         | Accuracy |
 |---------------|----------|
-| Random Forest | ~91%     |
-| 1D CNN        | ~98%     |
+| Random Forest | ~97%     |
+| 1D CNN        | ~83%     |
 
 ---
 
