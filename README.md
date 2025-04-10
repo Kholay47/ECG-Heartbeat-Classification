@@ -81,3 +81,5 @@ Install all dependencies
 - Large .csv files are not uploaded to GitHub due to size restrictions.
 
 - You can download the dataset from [Kaggle](https://www.kaggle.com/datasets/shayanfazeli/heartbeat).
+
+- Requires Python 3.9–3.11 to work with TensorFlow.
