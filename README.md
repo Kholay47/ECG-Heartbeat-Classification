@@ -1,85 +1,92 @@
-# 🫀 ECG Heartbeat Classification using 1D CNN
+# 🫀 ECG Classification Web App
 
-This project focuses on the detection and classification of cardiovascular diseases using ECG heartbeat signals from the [MIT-BIH Arrhythmia Dataset](https://www.kaggle.com/datasets/shayanfazeli/heartbeat). The dataset is provided in CSV format where each row represents one heartbeat as a 1D time-series signal.
+This is a machine learning-powered web application that classifies heartbeat (ECG) signals as **Normal** or **Abnormal** using the [PTB-XL ECG dataset](https://www.kaggle.com/datasets/shayanfazeli/heartbeat). The project features:
 
----
-
-## 📌 Project Objective
-
-To build a machine learning and deep learning pipeline that classifies ECG signals into five heartbeat categories using:
-
-- **Classical ML methods (Random Forest)**
-- **Deep Learning using 1D Convolutional Neural Networks (1D-CNN)**
+- A RandomForestClassifier-based model
+- A Flask backend for serving predictions
 
 ---
 
-## 🗂️ Dataset
+## 🚀 Features
 
-- Source: [Kaggle - ECG Heartbeat Categorization Dataset](https://www.kaggle.com/datasets/shayanfazeli/heartbeat)
-- Files used:
-  - `mitbih_train.csv`
-  - `mitbih_test.csv`
-- Each row represents a heartbeat as 187 ECG data points + 1 label.
-
-### 🏷️ Classes:
-| Label | Heartbeat Type              |
-|-------|------------------------------|
-| 0     | Normal                       |
-| 1     | Supraventricular Premature  |
-| 2     | Premature Ventricular       |
-| 3     | Fusion of Ventricular       |
-| 4     | Unclassified                |
+✅ Real-time ECG classification  
+✅ Clean web interface  
+✅ Model trained using stratified sampling  
+✅ Prediction summary with counts and percentage
 
 ---
 
-## 🧪 Model Overview
+## 🧠 Model Details
 
-### ✅ 1D Convolutional Neural Network (CNN)
-
-- **Input:** 187-length time-series ECG signal
-- **Architecture:**
-  - Conv1D layers
-  - MaxPooling
-  - Dropout
-  - Dense output layer with softmax
-
-### ✅ Random Forest
-
-- Used as a traditional machine learning baseline
-- Trained on flattened ECG signals
+- **Algorithm**: RandomForestClassifier
+- **Input Shape**: 187 features per sample
+- **Dataset**: PTB-XL (binary labels - 0: normal, 1: abnormal)
+- **Training split**: 80% training, 20% testing
+- **Preprocessing**: StandardScaler for feature normalization
 
 ---
 
-## 📉 Results
+## 📁 Folder Structure (for reference)
 
-| Model         | Accuracy |
-|---------------|----------|
-| Random Forest | ~97%     |
-| 1D CNN        | ~83%     |
+ - your_project/
+- ├── app.py
+- ├── model.pkl
+- ├── scaler.pkl
+- ├── templates/
+  - └── index.html
 
----
+## 
+### 📝 Install Required Packages
 
-## ⚙️ Requirements
-
-Install all dependencies
---
-- numpy
+Install all dependencies:
+- flask
 - pandas
-- matplotlib
--  scikit-learn
--  tensorflow
--  keras 
+- scikit-learn
+- joblib
 
-## 🚀 How to Run
-- Download dataset from Kaggle
+---
 
-- Place mitbih_train.csv and mitbih_test.csv in the project directory.
+## 📤 How to Use the App
 
-- Run the Jupyter notebook
+1. **Start the Flask server**  
+  Open the app in your browser
+Visit: http://127.0.0.1:5000
 
-## 📌 Notes
-- Large .csv files are not uploaded to GitHub due to size restrictions.
+##
 
-- You can download the dataset from [Kaggle](https://www.kaggle.com/datasets/shayanfazeli/heartbeat).
+2. **Upload an ECG .csv file**
 
-- Requires Python 3.9–3.11 to work with TensorFlow.
+  - Click Choose File
+
+  - Select a .csv file containing ECG samples
+
+  - Make sure the file contains only 187 columns (no headers or labels)
+
+##
+
+3. **Click "Classify"**
+
+  - The app will preprocess and classify each sample
+
+  - You'll get a result showing:
+
+    - ✅ Overall Prediction: Normal or Abnormal
+
+    - 📊 Count of Normal and Abnormal predictions
+
+    - 📈 Percentage of Abnormal samples
+
+---
+
+## ✅ Example Output
+
+  - Prediction: Abnormal
+  - Normal: 3
+  - Abnormal: 97
+  - Total Samples: 100
+  - Abnormal percentage: 97.00%
+
+---
+
+## 📎 Dataset Reference
+🔗 https://www.kaggle.com/datasets/shayanfazeli/heartbeat
