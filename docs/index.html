@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ECG Heartbeat Classification</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container fade-in">
+    <h1 class="glow">ECG Heartbeat Classification</h1>
+
+    <section>
+      <h2>📁 Project Overview</h2>
+      <p>This project classifies ECG heartbeats using a trained model (Random Forest or CNN) and Flask web application.</p>
+    </section>
+
+    <section>
+      <h2>📦 Files</h2>
+      <ul>
+        <li><strong>app.py</strong>: Flask backend for prediction API.</li>
+        <li><strong>ecg.ipynb</strong>: Jupyter Notebook with preprocessing, CNN model training, and evaluation.</li>
+        <li><strong>LICENSE</strong>: MIT License for open usage.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>⚙️ Features</h2>
+      <ul>
+        <li>File upload and prediction endpoint using Flask.</li>
+        <li>StandardScaler normalization and label encoding.</li>
+        <li>Model: 1D CNN and RandomForestClassifier comparison.</li>
+        <li>Accuracy and Confusion Matrix Evaluation.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🚀 Hosting & Running</h2>
+      <ol>
+        <li>Run <code>app.py</code> locally with Flask.</li>
+        <li>Upload a CSV with 187 feature columns for prediction.</li>
+        <li>Get "Normal" or "Abnormal" classification as output.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>📊 Model Results</h2>
+      <ul>
+        <li><strong>Random Forest Accuracy:</strong> 97.42%</li>
+        <li><strong>CNN Accuracy:</strong> 98.36% (Test Accuracy)</li>
+        <li><strong>Confusion Matrix:</strong> Available in notebook output.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>Made by Aayush Kholay © 2025 | MIT License</p>
+    </footer>
+  </div>
+</body>
+</html>
