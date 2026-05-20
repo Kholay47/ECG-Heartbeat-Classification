@@ -1,4 +1,4 @@
-# 🫀 ECG Classification Web App
+# 🫀 ECG Analysis System
 
 This is a machine learning-powered web application that classifies heartbeat (ECG) signals as **Normal** or **Abnormal** using the [PTB-XL ECG dataset](https://www.kaggle.com/datasets/shayanfazeli/heartbeat). The project features:
 
